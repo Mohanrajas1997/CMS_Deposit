@@ -1,0 +1,462 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{951D3618-8686-4A10-9DBD-75497932CC96}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CMS_Deposit</RootNamespace>
+    <AssemblyName>CMS_Deposit</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.RANGERLib">
+      <HintPath>..\..\..\CMS\FinalSolution\DevCMSDesktop\CheckManagementSystem\bin\Debug\AxInterop.RANGERLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.RANGERLib">
+      <HintPath>..\..\..\CMS\FinalSolution\DevCMSDesktop\CheckManagementSystem\bin\Debug\Interop.RANGERLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="KP-ImageViewerV2">
+      <HintPath>..\..\Vijayavel_Files\KP-ImageViewerV2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.26.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Chola_FinalSource\FinalSource\Chola_Scan\Chola\Chola\bin\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business\AdminBusiness.cs" />
+    <Compile Include="Business\AdminMasterBusiness.cs" />
+    <Compile Include="Business\ClearingDumpBusiness.cs" />
+    <Compile Include="Business\CMSEntryBusiness.cs" />
+    <Compile Include="Business\DepositSlipBusiness.cs" />
+    <Compile Include="Business\LoginBusiness.cs" />
+    <Compile Include="Business\PickupBusiness.cs" />
+    <Compile Include="Business\QuickCodeMasterBusiness.cs" />
+    <Compile Include="Business\ReportBusiness.cs" />
+    <Compile Include="Business\UploadBusiness.cs" />
+    <Compile Include="Common\Dataconnection.cs" />
+    <Compile Include="Common\global.cs" />
+    <Compile Include="Entities\AdminEntities.cs" />
+    <Compile Include="Entities\ClearingDump_Model.cs" />
+    <Compile Include="Entities\CMSEntities.cs" />
+    <Compile Include="Entities\DepositSlipEntities.cs" />
+    <Compile Include="Entities\LoginEntities.cs" />
+    <Compile Include="Entities\PickupPoint_Model.cs" />
+    <Compile Include="Entities\QuickCodeMasterEntites.cs" />
+    <Compile Include="Entities\Upload_Model.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmChangePassword.Designer.cs">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmChqEntryNewView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmChqEntryNewView.Designer.cs">
+      <DependentUpon>frmChqEntryNewView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmChqNewView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmChqNewView.Designer.cs">
+      <DependentUpon>frmChqNewView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmChqPulloutList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmChqPulloutList.Designer.cs">
+      <DependentUpon>frmChqPulloutList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmClearingImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmClearingImport.Designer.cs">
+      <DependentUpon>frmClearingImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCMSEntryNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCMSEntryNew.Designer.cs">
+      <DependentUpon>frmCMSEntryNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCreateGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCreateGroup.Designer.cs">
+      <DependentUpon>frmCreateGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCreateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCreateUser.Designer.cs">
+      <DependentUpon>frmCreateUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDeleteFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDeleteFile.Designer.cs">
+      <DependentUpon>frmDeleteFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDeposit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDeposit.Designer.cs">
+      <DependentUpon>frmDeposit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDepositQueue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDepositQueue.Designer.cs">
+      <DependentUpon>frmDepositQueue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDepositSlipList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDepositSlipList.Designer.cs">
+      <DependentUpon>frmDepositSlipList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmEnrichmentEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmEnrichmentEntry.Designer.cs">
+      <DependentUpon>frmEnrichmentEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmEnrichmentView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmEnrichmentView.Designer.cs">
+      <DependentUpon>frmEnrichmentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFind.Designer.cs">
+      <DependentUpon>frmFind.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPickupEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPickupEntry.Designer.cs">
+      <DependentUpon>frmPickupEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPickupPoint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPickupPoint.Designer.cs">
+      <DependentUpon>frmPickupPoint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPostClearing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPostClearing.Designer.cs">
+      <DependentUpon>frmPostClearing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPulloutEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPulloutEntry.Designer.cs">
+      <DependentUpon>frmPulloutEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmQuickCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmQuickCode.Designer.cs">
+      <DependentUpon>frmQuickCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmQuickCodeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmQuickCodeList.Designer.cs">
+      <DependentUpon>frmQuickCodeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmReUpload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmReUpload.Designer.cs">
+      <DependentUpon>frmReUpload.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUpload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUpload.Designer.cs">
+      <DependentUpon>frmUpload.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUserGroupMapping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUserGroupMapping.Designer.cs">
+      <DependentUpon>frmUserGroupMapping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSetPassword.Designer.cs">
+      <DependentUpon>frmSetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\frmChequeRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmChequeRpt.Designer.cs">
+      <DependentUpon>frmChequeRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmClearingRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmClearingRpt.Designer.cs">
+      <DependentUpon>frmClearingRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmDepositRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmDepositRpt.Designer.cs">
+      <DependentUpon>frmDepositRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmEnrichmentRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmEnrichmentRpt.Designer.cs">
+      <DependentUpon>frmEnrichmentRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmFileRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmFileRpt.Designer.cs">
+      <DependentUpon>frmFileRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmFinnaxiaRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmFinnaxiaRpt.Designer.cs">
+      <DependentUpon>frmFinnaxiaRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmUploadRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmUploadRpt.Designer.cs">
+      <DependentUpon>frmUploadRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmUserLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmUserLog.designer.cs">
+      <DependentUpon>frmUserLog.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmChangePassword.resx">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmChqEntryNewView.resx">
+      <DependentUpon>frmChqEntryNewView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmChqNewView.resx">
+      <DependentUpon>frmChqNewView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmChqPulloutList.resx">
+      <DependentUpon>frmChqPulloutList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmClearingImport.resx">
+      <DependentUpon>frmClearingImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCMSEntryNew.resx">
+      <DependentUpon>frmCMSEntryNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCreateGroup.resx">
+      <DependentUpon>frmCreateGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCreateUser.resx">
+      <DependentUpon>frmCreateUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDeleteFile.resx">
+      <DependentUpon>frmDeleteFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDeposit.resx">
+      <DependentUpon>frmDeposit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDepositQueue.resx">
+      <DependentUpon>frmDepositQueue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDepositSlipList.resx">
+      <DependentUpon>frmDepositSlipList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmEnrichmentEntry.resx">
+      <DependentUpon>frmEnrichmentEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmEnrichmentView.resx">
+      <DependentUpon>frmEnrichmentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFind.resx">
+      <DependentUpon>frmFind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPickupEntry.resx">
+      <DependentUpon>frmPickupEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPickupPoint.resx">
+      <DependentUpon>frmPickupPoint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPostClearing.resx">
+      <DependentUpon>frmPostClearing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPulloutEntry.resx">
+      <DependentUpon>frmPulloutEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmQuickCode.resx">
+      <DependentUpon>frmQuickCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmQuickCodeList.resx">
+      <DependentUpon>frmQuickCodeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmReUpload.resx">
+      <DependentUpon>frmReUpload.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUpload.resx">
+      <DependentUpon>frmUpload.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUserGroupMapping.resx">
+      <DependentUpon>frmUserGroupMapping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSetPassword.resx">
+      <DependentUpon>frmSetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reports\frmChequeRpt.resx">
+      <DependentUpon>frmChequeRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmClearingRpt.resx">
+      <DependentUpon>frmClearingRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmDepositRpt.resx">
+      <DependentUpon>frmDepositRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmEnrichmentRpt.resx">
+      <DependentUpon>frmEnrichmentRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmFileRpt.resx">
+      <DependentUpon>frmFileRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmFinnaxiaRpt.resx">
+      <DependentUpon>frmFinnaxiaRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmUploadRpt.resx">
+      <DependentUpon>frmUploadRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmUserLog.resx">
+      <DependentUpon>frmUserLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\create.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\create1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
