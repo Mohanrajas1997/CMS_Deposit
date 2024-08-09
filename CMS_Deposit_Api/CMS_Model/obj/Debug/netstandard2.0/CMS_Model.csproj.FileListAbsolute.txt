@@ -1,0 +1,18 @@
+F:\Murali\Flexicode_Source\CMS_Deposit\CMS_Deposit_Api\CMS_Model\bin\Debug\netstandard2.0\CMS_Model.deps.json
+F:\Murali\Flexicode_Source\CMS_Deposit\CMS_Deposit_Api\CMS_Model\bin\Debug\netstandard2.0\CMS_Model.dll
+F:\Murali\Flexicode_Source\CMS_Deposit\CMS_Deposit_Api\CMS_Model\bin\Debug\netstandard2.0\CMS_Model.pdb
+F:\Murali\Flexicode_Source\CMS_Deposit\CMS_Deposit_Api\CMS_Model\obj\Debug\netstandard2.0\CMS_Model.csprojAssemblyReference.cache
+F:\Murali\Flexicode_Source\CMS_Deposit\CMS_Deposit_Api\CMS_Model\obj\Debug\netstandard2.0\CMS_Model.csproj.CoreCompileInputs.cache
+F:\Murali\Flexicode_Source\CMS_Deposit\CMS_Deposit_Api\CMS_Model\obj\Debug\netstandard2.0\CMS_Model.AssemblyInfoInputs.cache
+F:\Murali\Flexicode_Source\CMS_Deposit\CMS_Deposit_Api\CMS_Model\obj\Debug\netstandard2.0\CMS_Model.AssemblyInfo.cs
+F:\Murali\Flexicode_Source\CMS_Deposit\CMS_Deposit_Api\CMS_Model\obj\Debug\netstandard2.0\CMS_Model.dll
+F:\Murali\Flexicode_Source\CMS_Deposit\CMS_Deposit_Api\CMS_Model\obj\Debug\netstandard2.0\CMS_Model.pdb
+D:\user\Vijayavel\Work At Home\vss\Others\DBS\CMS_Deposit\CMS_Deposit_Api\CMS_Model\bin\Debug\netstandard2.0\CMS_Model.deps.json
+D:\user\Vijayavel\Work At Home\vss\Others\DBS\CMS_Deposit\CMS_Deposit_Api\CMS_Model\bin\Debug\netstandard2.0\CMS_Model.dll
+D:\user\Vijayavel\Work At Home\vss\Others\DBS\CMS_Deposit\CMS_Deposit_Api\CMS_Model\bin\Debug\netstandard2.0\CMS_Model.pdb
+D:\user\Vijayavel\Work At Home\vss\Others\DBS\CMS_Deposit\CMS_Deposit_Api\CMS_Model\obj\Debug\netstandard2.0\CMS_Model.csprojAssemblyReference.cache
+D:\user\Vijayavel\Work At Home\vss\Others\DBS\CMS_Deposit\CMS_Deposit_Api\CMS_Model\obj\Debug\netstandard2.0\CMS_Model.AssemblyInfoInputs.cache
+D:\user\Vijayavel\Work At Home\vss\Others\DBS\CMS_Deposit\CMS_Deposit_Api\CMS_Model\obj\Debug\netstandard2.0\CMS_Model.AssemblyInfo.cs
+D:\user\Vijayavel\Work At Home\vss\Others\DBS\CMS_Deposit\CMS_Deposit_Api\CMS_Model\obj\Debug\netstandard2.0\CMS_Model.csproj.CoreCompileInputs.cache
+D:\user\Vijayavel\Work At Home\vss\Others\DBS\CMS_Deposit\CMS_Deposit_Api\CMS_Model\obj\Debug\netstandard2.0\CMS_Model.dll
+D:\user\Vijayavel\Work At Home\vss\Others\DBS\CMS_Deposit\CMS_Deposit_Api\CMS_Model\obj\Debug\netstandard2.0\CMS_Model.pdb
